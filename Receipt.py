@@ -1,3 +1,6 @@
+# Program simulates a computer hardware store transaction
+# and prints a receipt after the customer made a purchase.
+
 print("XXXXXXXXXXXXXXXXXXXXXXXX")
 print("XX                    XX")
 print("XX     Byte Stop      XX")
@@ -29,18 +32,18 @@ def total(CPU_quantity, HDD_quantity, RAM_quantity, PSU_quantity):
     Sub_total = CPU_total + HDD_total + RAM_total + PSU_total
 
     print("=====Item Cost=====")
-    print("Total Cost of CPU: ", format(CPU_total, '.2f'))
-    print("Total Cost of HDD: ", format(HDD_total, '.2f'))
-    print("Total Cost of RAM: ", format(RAM_total, '.2f'))
-    print("Total Cost of PSU: ", format(PSU_total, '.2f'))
+    print("Total Cost of CPU: $", format(CPU_total, '.2f'))
+    print("Total Cost of HDD: $", format(HDD_total, '.2f'))
+    print("Total Cost of RAM: $", format(RAM_total, '.2f'))
+    print("Total Cost of PSU: $", format(PSU_total, '.2f'))
     print("                 ======")
     print("Subtotal of items: ", format(Sub_total, '.2f'))
-    Due_amount = float(input('Enter the amount due: '))
+    Due_amount = float(input('Enter the amount due: $'))
     print("Amount Entered: ", format(Due_amount, '.2f'))
     if Due_amount >= Sub_total:
         Due_change = Due_amount - Sub_total
         print("                 ======")
-        print("Change Due: ", format(Due_change, '.2f'))
+        print("Change Due: $", format(Due_change, '.2f'))
     else:
-        print("I'm sorry you don't have enough money to make this purchase.")
+        print("I'm sorry, you don't have enough money to make this purchase.")
 main()
